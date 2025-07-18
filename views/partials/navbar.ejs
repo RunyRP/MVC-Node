@@ -14,11 +14,15 @@
             </li>
             <li class="nav-item">
             <a class="nav-link" href="/campgrounds/new">New Campground</a>
-            <!-- </li>
-            <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-            </li> -->
         </ul>
+          <div class="ms-auto d-flex navbar-nav">
+            <% if (!currentUser) { %>}
+              <a href="/login" class="nav-link">Login</a>
+              <a href="/register" class="nav-link">Register</a>
+            <% } else { %>
+              <a href="/logout" class="nav-link">Logout</a>
+            <% } %>
+          </div>
         </div>
     </div>
     </nav>
